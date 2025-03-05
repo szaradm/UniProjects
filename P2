@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+struct{
+int ID;
+string name;
+int age;
+
+}
+PI1,PI2,PI3,PI4,PI5;
+
+PI1.ID=12345;
+PI1.name= "jullie";
+PI1.age = 4;
+
+PI2.ID=54321;
+PI2.name= "jack";
+PI2.age= 11;
+
+PI3.ID= 1009988;
+PI3.name= "harry";
+PI3.age= 18;
+
+PI4.ID= 112233;
+PI4.name= "daniel";
+PI4.age= 25;
+
+PI5.ID= 900334;
+PI5.name= "sara";
+PI5.age= 45;
+
+double avg;
+int sum;
+
+
+sum = PI1.age+PI2.age+PI3.age+PI4.age+PI5.age;
+avg = sum / 5;
+cout << "Average Age Is:" << avg << endl;
+return 0;
+}
+
