@@ -1,0 +1,52 @@
+#include <iostream>
+using namespace std;
+void getAverage(const int array[], const int size, double *avg) {
+    int sum = 0;
+    for (int i = 0; i < size; i++) {
+        sum += array[i];
+    }
+    *avg = sum / size;
+}
+
+void getMaximum(const int array[], int size, int *max) {
+    *max = array[0];
+    for (int i = 1; i < size; i++) {
+        if (array[i] > *max) {
+            *max = array[i];
+        }
+    }
+}
+
+void getMinimum(const int array[], int size, int *min) {
+    *min = array[0];
+    for (int i = 1; i < size; i++) {
+        if (array[i] < *min) {
+            *min = array[i];
+        }
+    }
+}
+
+void getModulus(const int maximum, const int minimum, int *mod) {
+    *mod = maximum % minimum;
+}
+
+int main() {
+    int array[] = {5, 10, 400, 6, 20000};
+    int size = sizeof(array);
+
+    double avg;
+    int max, min, mod;
+
+    getAverage(array, size, &avg);
+    getMaximum(array, size, &max);
+    getMinimum(array, size, &min);
+    getModulus(max, min, &mod);
+
+    cout << "Average: " << avg << endl;
+    cout << "Max: " << max << endl;
+    cout << "Min: " << min << endl;
+    cout << "Mod: " << mod << endl;
+
+    return 0;
+}
+
