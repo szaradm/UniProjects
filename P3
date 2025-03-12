@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+class person {
+private:
+    string name;
+    int age;
+public:
+    personlist() {
+    names.resize(10);
+    ages.resize(10);
+    }
+
+    void getPersonData() {
+    cout << "enter your names and ages please:" << endl;
+    for (int i = 0; i < 10; ++i) {
+        cin >> names[i];
+        cin >> ages[i];
+    }
+}
+void personlist() {
+for(int i =0; i< 10; ++i){
+
+    cout << "Name:" << names[i] << endl << "Age:" << ages[i] << endl;
+}
+}
+double avg() {
+accumulate(ages.begin(), ages.end() / ages.size);
+}
+int main() {
+personlist people;
+people.personlist();
+
+cout << "Average age:" << people.avg() << endl;
+return 0;
+}
